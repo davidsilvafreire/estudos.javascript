@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro exercício</title>
+    <style>
+        body{font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        div.caixa01 {
+            background-color: aqua;
+            width: 450px;
+            height: 200px;
+        }
+
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+
+
+        input#texto01, input#texto02 {
+            width: 60px;
+        }
+
+        div#resultado {
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa01">
+        <h1>Cálculo de Somar:</h1>
+        <input type="number" name="texto01" id="texto01"> +
+        <!--primeira caixa dos números-->
+
+        <input type="number" name="texto02" id="texto02">
+        <!--segunda caixa dos números-->
+
+        <input type="button" value="Somar" onclick="somar()">
+        <!--botão dos somar das caixas dos números-->
+
+        <div id="resultado">Resultado</div>
+        <!--mostrar o resultado na tela do site-->
+    </div>
+
+
+    <script>
+        function somar(){
+            var texto01 = window.document.querySelector('input#texto01')
+            var texto02 = window.document.querySelector('input#texto02')
+            var res = window.document.getElementById('resultado')
+            //identificação de cada elemento
+
+            var n1 = Number(texto01.value)
+            var n2 = Number(texto02.value)
+            //converter caixas de textos em números
+
+            var somar = n1 + n2
+            /*Com a conversão das caixas de textos para números e com o sinal + que não é mais de concatenação(cola de string!), criei uma variável que agora soma os dois numeros (já que foram convertidos em números)*/
+
+            res.innerHTML = `A soma de ${n1} e ${n2} é igual a ${somar}`
+            //irá mostrar na tela do site
+            
+        }
+    </script>
+</body>
+</html>

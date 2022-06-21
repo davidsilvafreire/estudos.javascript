@@ -34,7 +34,7 @@ function contar(){
                         }
           } else {
             for (let contador = i; contador >= f; contador -= p)
-            resultado.innerHTML += `${contador} \u{1F449}`
+            resultado.innerHTML += `${contador} \u{1F47D}`
           }
     }
     resultado.innerHTML += ` \u{1F693} `

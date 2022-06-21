@@ -5,19 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de idade</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de idade</h1>
     </header>
+
+
     <section>
+        <!--Formulário de entrada-->
         <div>
 
+            <!--Para o ano de nascimento  var = formularioAno-->
+            <p>Ano de Nascimento:
+                <input type="number" name="textoAno" id="textoAno" min="0">
+            </p>
+
+            <!--Para o gênero...-->
+            <p>Sexo:
+                <input type="radio" name="radsex" id="masculino" checked>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="radsex" id="feminino">
+                <label for="feminino">Feminino</label>
+            </p>
+
+            <!--Para o botão...-->
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
-        <div>
 
+        <!--Formulário de saída-->
+        <div id="resultado">
+            Preencha os dados acima para ver o resultado!
         </div>
     </section>
+
+
     <footer>
         <p>&copy; !Devon</p>
     </footer>

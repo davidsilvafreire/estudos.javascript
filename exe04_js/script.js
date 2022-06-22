@@ -18,7 +18,6 @@ function isNumero(n){
 }
 
 
-//
 function inLista(n, l){
 //se a posição do numero encontrado na lista for diferente('!='), não encontrará nenhum elemento(-n) na lista
     if (l.indexOf(Number(n)) != -1) {
